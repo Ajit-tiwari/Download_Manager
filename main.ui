@@ -10,6 +10,9 @@
     <height>445</height>
    </rect>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::TabFocus</enum>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -23,9 +26,256 @@
       <height>401</height>
      </rect>
     </property>
-    <property name="currentIndex">
-     <number>1</number>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
     </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>81</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="photo.qrc">:/icons/home_download.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>101</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Download File</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>50</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>81</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="photo.qrc">:/icons/youtube.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>20</y>
+         <width>101</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Youtube Single Video Download </string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>231</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>81</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="photo.qrc">:/icons/home_youtube.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>20</y>
+         <width>101</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Youtube Playlist Download</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>220</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>81</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="photo.qrc">:/icons/home_settings.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>20</y>
+         <width>101</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="text">
+        <string>Application Settings</string>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Tab 1</string>
@@ -33,8 +283,8 @@
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>90</y>
+        <x>100</x>
+        <y>100</y>
         <width>371</width>
         <height>25</height>
        </rect>
@@ -46,8 +296,8 @@
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>130</y>
+        <x>100</x>
+        <y>140</y>
         <width>371</width>
         <height>25</height>
        </rect>
@@ -59,8 +309,8 @@
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>130</y>
+        <x>490</x>
+        <y>140</y>
         <width>89</width>
         <height>25</height>
        </rect>
@@ -72,8 +322,8 @@
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>290</y>
+        <x>240</x>
+        <y>300</y>
         <width>89</width>
         <height>25</height>
        </rect>
@@ -85,9 +335,9 @@
      <widget class="QProgressBar" name="progressBar">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>190</y>
-        <width>371</width>
+        <x>100</x>
+        <y>200</y>
+        <width>411</width>
         <height>23</height>
        </rect>
       </property>
@@ -109,6 +359,12 @@
         <height>371</height>
        </rect>
       </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
       <property name="tabPosition">
        <enum>QTabWidget::West</enum>
       </property>
@@ -125,8 +381,8 @@
        <widget class="QLineEdit" name="lineEdit_3">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>90</y>
+          <x>60</x>
+          <y>70</y>
           <width>401</width>
           <height>25</height>
          </rect>
@@ -141,8 +397,8 @@
        <widget class="QLineEdit" name="lineEdit_4">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>140</y>
+          <x>60</x>
+          <y>120</y>
           <width>401</width>
           <height>25</height>
          </rect>
@@ -157,8 +413,8 @@
        <widget class="QPushButton" name="pushButton_3">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>90</y>
+          <x>480</x>
+          <y>70</y>
           <width>89</width>
           <height>25</height>
          </rect>
@@ -170,8 +426,8 @@
        <widget class="QPushButton" name="pushButton_4">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>140</y>
+          <x>480</x>
+          <y>120</y>
           <width>89</width>
           <height>25</height>
          </rect>
@@ -183,11 +439,18 @@
        <widget class="QPushButton" name="pushButton_5">
         <property name="geometry">
          <rect>
-          <x>218</x>
-          <y>300</y>
+          <x>198</x>
+          <y>320</y>
           <width>121</width>
           <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
         </property>
         <property name="text">
          <string>Start Download</string>
@@ -196,9 +459,9 @@
        <widget class="QProgressBar" name="progressBar_2">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>230</y>
-          <width>401</width>
+          <x>60</x>
+          <y>240</y>
+          <width>441</width>
           <height>23</height>
          </rect>
         </property>
@@ -209,11 +472,18 @@
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>190</y>
+          <x>80</x>
+          <y>180</y>
           <width>131</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
         </property>
         <property name="text">
          <string>Video Quality</string>
@@ -222,8 +492,8 @@
        <widget class="QComboBox" name="comboBox">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>190</y>
+          <x>300</x>
+          <y>180</y>
           <width>151</width>
           <height>25</height>
          </rect>
@@ -232,9 +502,9 @@
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>160</x>
-          <y>270</y>
-          <width>201</width>
+          <x>140</x>
+          <y>280</y>
+          <width>231</width>
           <height>20</height>
          </rect>
         </property>
@@ -292,19 +562,6 @@
          <string>Browse</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="geometry">
-         <rect>
-          <x>490</x>
-          <y>70</y>
-          <width>89</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Get</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="pushButton_13">
         <property name="geometry">
          <rect>
@@ -334,35 +591,35 @@
        <widget class="QComboBox" name="comboBox_3">
         <property name="geometry">
          <rect>
-          <x>310</x>
+          <x>350</x>
           <y>160</y>
-          <width>151</width>
+          <width>111</width>
           <height>25</height>
          </rect>
         </property>
         <item>
          <property name="text">
-          <string>1080 P</string>
+          <string>1080</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>720 P</string>
+          <string>720</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>480 P</string>
+          <string>480</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>360 P</string>
+          <string>360</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>144 P</string>
+          <string>144</string>
          </property>
         </item>
        </widget>
@@ -371,7 +628,7 @@
          <rect>
           <x>70</x>
           <y>270</y>
-          <width>401</width>
+          <width>441</width>
           <height>23</height>
          </rect>
         </property>
@@ -414,6 +671,9 @@
           <height>23</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(85, 255, 0)</string>
+        </property>
        </widget>
        <widget class="QLCDNumber" name="lcdNumber_2">
         <property name="geometry">
@@ -424,8 +684,16 @@
           <height>23</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="autoFillBackground">
          <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">Qt::red</string>
         </property>
         <property name="smallDecimalPoint">
          <bool>false</bool>
@@ -448,6 +716,82 @@
         </property>
        </widget>
       </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>50</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>21</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select your Theme</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>170</y>
+        <width>121</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#323232</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>170</y>
+        <width>121</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(10, 64, 98)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>170</y>
+        <width>121</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(89, 89, 89)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </widget>
     </widget>
    </widget>
@@ -550,7 +894,7 @@
      <x>0</x>
      <y>0</y>
      <width>754</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

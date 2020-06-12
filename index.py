@@ -7,7 +7,8 @@ import os
 from os import path
 from PyQt5.uic import loadUiType
 import urllib.request
-#import pafy
+import humanize
+
 ui,_=loadUiType('main.ui')
 class MainApp(QMainWindow,ui):
     def __init__(self,parent=None):
@@ -19,7 +20,8 @@ class MainApp(QMainWindow,ui):
     
     
     def InitUI(self):       #Conatin All UI Changes in Loading
-        pass
+        self.tabWidget.tabBar().setVisible(False)
+        self.Apply_DarkGray_Style()
     def Handle_Buttons(self): #Handle all buttons in app
         self.pushButton_2.clicked.connect(self.Download)
         self.pushButton.clicked.connect(self.Handle_Browse)
@@ -28,6 +30,14 @@ class MainApp(QMainWindow,ui):
         self.pushButton_4.clicked.connect(self.Save_Browse)
         self.pushButton_13.clicked.connect(self.Playlist_Download)
         self.pushButton_6.clicked.connect(self.Playlist_Save_Browse)
+        self.pushButton_14.clicked.connect(self.Open_Home)
+        self.pushButton_18.clicked.connect(self.Open_Download)
+        self.pushButton_17.clicked.connect(self.Open_Youtube)
+        self.pushButton_16.clicked.connect(self.Open_Settings)
+        self.pushButton_8.clicked.connect(self.Apply_DarkGray_Style)
+        self.pushButton_9.clicked.connect(self.Apply_QDark_Style)
+        self.pushButton_10.clicked.connect(self.Apply_QDarkBlue_Style)
+
     
     def Handle_Progress(self,blocknum,blocksize,totalsize): #Calculate Progress
         readed_data=blocknum*blocksize
@@ -54,9 +64,9 @@ class MainApp(QMainWindow,ui):
                 QMessageBox.warning(self,'Download Error','URL Not Valid')
                 return
         QMessageBox.information(self,'Download Completed','Download Completed')
-        lineEdit.setText('')
-        lineEdit_2.setText('')
-        progressBar.setValue()
+        self.lineEdit.setText('')
+        self.lineEdit_2.setText('')
+        self.progressBar.setValue(0)
 
     def Save_Browse(self):
         save_location = QFileDialog.getSaveFileName(self , caption="Save as" , directory="." , filter="All Files(*.*)")
@@ -84,7 +94,7 @@ class MainApp(QMainWindow,ui):
                 data = "{} {} {} {}".format(stream.mediatype , stream.extension , stream.quality , size)
                 self.comboBox.addItem(data)
 
-    def Download_video(self):
+    def Download_Video(self):
         video_url = self.lineEdit_3.text()
         save_location = self.lineEdit_4.text()
 
@@ -96,9 +106,12 @@ class MainApp(QMainWindow,ui):
             video_stream = video.videostreams
             video_quality = self.comboBox.currentIndex()
             download = video_stream[video_quality].download(filepath=save_location , callback=self.Video_Progress)
+            QMessageBox.information(self,'Download Completed','Download Completed')
+            self.lineEdit_3.setText('')
+            self.lineEdit_4.setText('')
+            self.progressBar_2.setValue(0)
 
-
-    def Video_progress(self, total , received , ratio , rate , time):
+    def Video_Progress(self, total , received , ratio , rate , time):
         read_data = received
         if total > 0 :
             download_percentage = read_data * 100 / total
@@ -155,10 +168,44 @@ class MainApp(QMainWindow,ui):
 
             self.label_7.setText(str('{} minutes remaining'.format(remaining_time)))
             QApplication.processEvents()
+        if received==total:
+            QMessageBox.information(self,'Download Completed','Download Completed')
 
     def Playlist_Save_Browse(self):
         playlist_save_location = QFileDialog.getExistingDirectory(self , "Select Download Directory")
         self.lineEdit_6.setText(playlist_save_location)
+
+    # UI OPTIONS
+    def Open_Home(self):
+        self.tabWidget.setCurrentIndex(0)
+
+    def Open_Download(self):
+        self.tabWidget.setCurrentIndex(1)
+
+    def Open_Youtube(self):
+        self.tabWidget.setCurrentIndex(2)
+
+
+    def Open_Settings(self):
+        self.tabWidget.setCurrentIndex(3)
+
+    # THEMES
+    def Apply_QDark_Style(self):
+        style = open('themes/qdark.css' , 'r')
+        style = style.read()
+        self.setStyleSheet(style)
+
+
+    def Apply_DarkGray_Style(self):
+        style = open('themes/qdarkgray.css' , 'r')
+        style = style.read()
+        self.setStyleSheet(style)
+
+    def Apply_QDarkBlue_Style(self):
+        style = open('themes/darkblu.css' , 'r')
+        style = style.read()
+        self.setStyleSheet(style)
+
 def main():
     app=QApplication(sys.argv)
     window=MainApp()
